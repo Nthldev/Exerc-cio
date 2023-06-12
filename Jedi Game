@@ -1,0 +1,74 @@
+score = 0
+
+print("Hello! I am the droid JD-1F!")
+user_name = input("What's your name?")
+print("Hello" + " "  + user_name + "!")
+print("Welcome to the secret Jedi Temple" + "..." + "until now, anyway..rs")
+print ("In order for you to access this door in front of you, you will have to pass a test!")
+user_ready = input("Are you ready?")
+if user_ready == "Yes" or user_ready == "yes":
+    print("Then shall begin!")
+else:
+    print("It seems you are not ready for this challenge. Come back when you do.")
+
+print("Mark the correct answers and I be able to tell if you really are a Jedi or a Sith!")
+
+print("A)" + " " + "A Jedi is as strong as hil will to resist the dark force")
+print("B)" + " " + "A Jedi is as strong as his force with the lightsaber")
+first_answer = input("A or B?")
+if first_answer == "A" or first_answer == "a":
+    score += 1
+if first_answer == "B" or first_answer == "b":
+    score += 0
+
+print("A)" + " " + "A Jedi should learn to control his mind and feelings")
+print("B)" + " " + "A Jedi should get attached to friends and family")
+first_answer = input("A or B?")
+if first_answer == "A" or first_answer == "a":
+    score += 1
+if first_answer == "B" or first_answer == "b":
+    score += 0
+
+print("A)" + " " + "A Jedi should use the force for knowledge and defense, never for attack")
+print("B)" + " " + "A Jedi should use the force whenever he can")
+first_answer = input("A or B?")
+if first_answer == "A" or first_answer == "a":
+    score += 1
+if first_answer == "B" or first_answer == "b":
+    score += 0
+
+print("A)" + " " + "A Jedi must meditate and find the answers on the force")
+print("B)" + " " + "A Jedi must be afraid of losing what he loves")
+first_answer = input("A or B?")
+if first_answer == "A" or first_answer == "a":
+    score += 1
+if first_answer == "B" or first_answer == "b":
+    score += 0
+
+print('A)' + ' ' + '"I`m one with the Force, and the Force is with me"')
+print("B)" + " " + '"Don`t underestimate the force"')
+first_answer = input("A or B?")
+if first_answer == "A" or first_answer == "a":
+    score += 1
+if first_answer == "B" or first_answer == "b":
+    score += 0
+
+print("I see...hummm..interesting...I need one more test to find out if you are an Apprentice or a Master!")
+print("I have generated a number between 1 and 10 and stored in my memory. What number is that?")
+
+import random
+
+random_number = random.randint(1, 10)
+user_number = input("Type a number between 1 and 10:")
+if user_number == random_number:
+    print("Wow! The force is strong in this one. You surely are a Master!")
+    user_level = "Master"
+else:
+    print("haha...You have much to learn young one!")
+    user_level = "Apprentice"
+print("Very well! Let me check your results!")
+
+if score >= 3:
+    print("So glad to see a Jedi {}! Welcome, Jedi {}, to the Secret Jedi Temple!".format(user_level, user_name))
+if score <= 3:
+    print("Oh no!! A Sith {}! No matter what you try, you won't be able to come in Sith {}!".format(user_level, user_name))
