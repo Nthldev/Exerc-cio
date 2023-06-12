@@ -10,7 +10,9 @@ if user_ready == "Yes" or user_ready == "yes":
     print("Then shall begin!")
 else:
     print("It seems you are not ready for this challenge. Come back when you do.")
-
+    import time
+    time.sleep(3)  # Pausa a execução por 3 segundos
+    exit()
 print("Mark the correct answers and I be able to tell if you really are a Jedi or a Sith!")
 
 print("A)" + " " + "A Jedi is as strong as hil will to resist the dark force")
@@ -64,7 +66,7 @@ if user_number == random_number:
     print("Wow! The force is strong in this one. You surely are a Master!")
     user_level = "Master"
 else:
-    print("haha...You have much to learn young one!")
+    print("The number was {} and your number was {}...You have much to learn young one!".format(random_number, user_number))
     user_level = "Apprentice"
 print("Very well! Let me check your results!")
 
@@ -72,3 +74,6 @@ if score >= 3:
     print("So glad to see a Jedi {}! Welcome, Jedi {}, to the Secret Jedi Temple!".format(user_level, user_name))
 if score <= 3:
     print("Oh no!! A Sith {}! No matter what you try, you won't be able to come in Sith {}!".format(user_level, user_name))
+    import time
+    time.sleep(3)  # Pausa a execução por 3 segundos
+    exit()
